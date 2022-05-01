@@ -31,6 +31,7 @@
 
             body{
                 overflow-x: hidden;
+                scroll-behavior: smooth;
             }
 
             .navbar{
@@ -91,8 +92,8 @@
                 z-index: 11;
             }
 
-            .nav-seconday *{
-                color: black;
+            .nav-seconday .nav-link{
+                color: #414f6b;
             }
             .section2{
                 min-height: 100vh;
@@ -101,6 +102,8 @@
             .sectioncarousel{
                 min-height: 20vh;
                 background-image: url("./assets/images/Bgcarousel.png");
+                background-size: cover;
+                background-repeat: no-repeat;
             }
             .bra{
                 word-break: break-word;
@@ -112,12 +115,11 @@
             .hero-text-blue-2{
                 color: #414f6b;
             }
-            .big{
+            .big,.big2{
                 font-size: 135pt;
                 font-family: oswald;
-                
             }
-            .blue{
+            .blue,.blue2{
                 color: rgba(65,79,107,0.5);
             }
             .pt-5-cust{
@@ -142,6 +144,18 @@
                 top: -40px;
                 left: -30px;
             }
+
+            .big2::after{
+                content: "Climb";
+                text-transform: uppercase;
+                font-family: oswald;
+                font-weight: bolder;
+                font-size: 0.2em;
+                color: #414f6b;
+                position: relative;
+                top: -40px;
+                left: -20px;
+            }
             .sec2text2{
                 position: relative;
                 top:-280px;
@@ -149,6 +163,32 @@
                 font-size: 2.7em;
                 text-transform: uppercase;
             }
+
+            .carousel-indicators [data-bs-target]{
+                height: 10px;
+                width: 10px;
+                border-radius: 100%;
+                background-color: rgb(255, 255, 255);
+            }
+
+            .carousel-indicators {
+                bottom: -50px;
+            }
+
+            .bg-prim{
+                background-color: #414f6b;;
+            }
+            #myTab .nav-link{
+                text-transform: uppercase;
+                font-family: oswald;
+                font-size: 20pt;
+                color: #b0b4be;
+            }
+
+            .nav-link .active{
+                color: #414f6b;
+            }
+
         </style>
     </head>
     <body>
@@ -169,7 +209,7 @@
                             <a class="nav-link active" aria-current="page" href="#">01.team</a>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="nav-link" href="#">02.history</a>
+                            <a class="nav-link" href="#history">02.history</a>
                         </li>
 
                     </ul>
@@ -213,7 +253,7 @@
                             <a class="nav-link active" aria-current="page" href="#">01.team</a>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="nav-link" href="#">02.history</a>
+                            <a class="nav-link" href="#history">02.history</a>
                         </li>
 
                     </ul>
@@ -224,7 +264,7 @@
     </section>
 
 
-    <section class="container-fluid section2">
+    <section class="container-fluid section2" id="history">
         <div class="row justify-content-center">
           <div class="col-md-8 pt-5-cust">
             <p class="big blue">01.</p>
@@ -236,8 +276,81 @@
 
     <section class="container-fluid sectioncarousel">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-8 pt-4 pb-5">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div  class="d-flex justify-content-evenly">
+                            <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
+                            <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
+                            <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
+                            <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div  class="d-flex justify-content-evenly">
+                            <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
+                            <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
+                            <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
+                            <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-evenly">
+                            <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
+                            <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
+                            <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
+                            <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="container section3 bg-white">
+        <div class="row">
+          <div class="col-md-3 offset-md-1">
+            <p class="big2 blue2">02.</p>
+         </div>
+         <div class="col-md-6 p-1 d-flex align-items-center">
+            <p class="text-normal px-3">Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue. </p>
+         </div>
+        </div>
+    </section>
+
+    <section class="container-fluid section4 bg-prim">
+        <div class="row">
+          <div class="col-md-11 offset-md-1">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="Mountain1-tab" data-bs-toggle="tab" data-bs-target="#Mountain1" type="button" role="tab" aria-controls="home" aria-selected="true">Mountain1</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="Mountain2-tab" data-bs-toggle="tab" data-bs-target="#Mountain2" type="button" role="tab" aria-controls="profile" aria-selected="false">Mountain2</button>
+                </li>
+              </ul>
+         </div>
+        </div>
+    </section>
+
+    <section class="container-fluid section-tab">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="Mountain1" role="tabpanel" aria-labelledby="Mountain1-tab">
+ 1
+                    </div>
+                    <div class="tab-pane fade" id="Mountain2" role="tabpanel" aria-labelledby="Mountain2-tab">
+2
+                    </div>
+                </div>
             </div>
         </div>
     </section>
