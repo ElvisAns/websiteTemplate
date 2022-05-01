@@ -39,5 +39,4 @@ I'm a full stack developer with a passion for both frontend and backend developm
 
 
 ## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://user-images.githubusercontent.com/35831811/166160683-314a9aff-c320-4df3-b1b5-aff41a0b0144.png)
