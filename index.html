@@ -29,6 +29,10 @@
                 src: url('./assets/fonts/Lato-BlackItalic.ttf');
             }
 
+            body{
+                overflow-x: hidden;
+            }
+
             .navbar{
                 background-color: transparent;
             }
@@ -127,13 +131,22 @@
                 left: 100px;
                 max-width: 70%;
             }
-            .text-os{
+            .big::after{
+                content: "history";
+                text-transform: uppercase;
                 font-family: oswald;
+                font-size: 0.2em;
+                color: #414f6b;
+                
+                position: relative;
+                top: -40px;
+                left: -30px;
             }
             .sec2text2{
                 position: relative;
-                top:-100px;
-                left:
+                top:-280px;
+                left:156px;
+                font-size: 2.7em;
                 text-transform: uppercase;
             }
         </style>
@@ -216,7 +229,7 @@
           <div class="col-md-8 pt-5-cust">
             <p class="big blue">01.</p>
             <p class="text-normal sec2text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ante viverra, rutrum erat rutrum, consectetur mi. Proin at maximus est. Nullam purus ex, iaculis sed erat sed, blandit tincidunt quam. Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue. </p>
-            <p class="text-os sec2text2">HISTORY</p>
+            
         </div>
         </div>
     </section>
@@ -232,4 +245,14 @@
     <script type="text/javascript" src="./assets/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="./assets/bs/js/bootstrap.bundle.js"></script>
     <script>
-        $(document).ready(func
+        $(document).ready(function(){
+          $(window).scroll(function(){
+            let el = document.getElementById("#navbarNav2");
+            const pos= window.pageYOffset + el.getBoundingClientRect();
+            alert (pos.top);
+            return true;
+          })
+        })
+    </script>
+    </body>
+</html>
