@@ -26,12 +26,18 @@
             
             @font-face {
                 font-family: 'lato_italic';
+                src: url('./assets/fonts/Lato-Italic.ttf');
+            }
+
+            @font-face {
+                font-family: 'lato_italic_black';
                 src: url('./assets/fonts/Lato-BlackItalic.ttf');
             }
 
             body{
                 overflow-x: hidden;
                 scroll-behavior: smooth;
+                max-width:fit-content;
             }
 
             .navbar{
@@ -41,6 +47,7 @@
                 font-family: 'lato_italic' !important;
                 text-decoration: underline;
                 text-underline-offset: 0.2em;
+                text-transform: uppercase;
             }
             #navbarNav > ul > li > a:hover,#navbarNav2 > ul > li > a:hover{
                 font-size:20px;
@@ -65,6 +72,7 @@
                 width: 100%;
                 min-height: 100vh;
                 background-image: url("./assets/images/Curves\ 1.png");
+                background-repeat: no-repeat;
             }
             .hero-text{
                 font-size: 70pt;
@@ -98,6 +106,7 @@
             .section2{
                 min-height: 100vh;
                 background-image: url("./assets/images/Bgsection2.png");
+                background-repeat: no-repeat;
             }
             .sectioncarousel{
                 min-height: 20vh;
@@ -185,175 +194,336 @@
                 color: #b0b4be;
             }
 
-            .nav-link .active{
+            #myTab .nav-link.active{
                 color: #414f6b;
+                background-color: rgba(255, 255, 255, .6);
+                border-radius: 0;
+                text-decoration: underline;
+                text-underline-offset: 0.2em;
+            }
+            #Mountain1,#Mountain2{
+                height: 80vh;
+                width: 100vw;
+                margin-left:-15px;
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-size: cover;
+                background-repeat: repeat-y;
+            }
+            #Mountain1{
+                background-image: url("./assets/images/mountain1.png");
+            }
+            
+            #Mountain2{
+                background-image: url("./assets/images/mountain2.png");
+            }
+            .cont-card{
+                padding-top:150px;
+                padding-left:200px;
+                font-family: 'lato-light';
+            }
+            .card1{
+                background-color: rgba(255, 255, 255, .8);
+                padding:20px;
+                width: 350px;
+            }
+
+            @media screen and (max-width:800px){
+                .cont-card{
+                padding-top:120px;
+                padding-left:80px;
+            }
+            .card1{
+                background-color: rgba(255, 255, 255, .8);
+                padding:20px;
+                max-width: 95%;
+            }
+
+            @media screen and (max-width:500px){
+                .cont-card{
+                    padding-top:100px;
+                    padding-left:15px;
+                }
+            }
+
+
+            }
+            .table tr td,.table tr th{
+                padding: 0rem 0.5rem;
+            }
+            .table{
+                border-color: transparent;
+            }
+
+            .table>:not(:last-child)>:last-child>* {
+                border-bottom-color: transparent;
+            }
+            thead tr{
+                font-family: oswald;
+                font-size: 32pt;
+                color : #414f6b;
+            }
+
+            thead tr th{
+                font-weight: 100;
+            }
+
+            footer{
+                background-color: #414f6b;
+                min-height: 80px;
+            }
+
+            .copyright{
+                font-family: lato_italic_black;
+                color: #63769d;
             }
 
         </style>
     </head>
     <body>
-
-    <section class="bg">  
-        <nav class="navbar navbar-expand-md navbar-light">
-            <div class="container-fluid">
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-align-justify"></i>
-                </button>
-
-                <a class="navbar-brand" href="#"><img class="d-inline-block align-text-top" src="./assets/images/Logo.png" alt="blogify logo" ></a>
-
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item me-2">
-                            <a class="nav-link active" aria-current="page" href="#">01.team</a>
-                        </li>
-                        <li class="nav-item me-2">
-                            <a class="nav-link" href="#history">02.history</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <header>
-            <div class="container col-xxl-8 px-4 py-5 mt-5 hero">
-                <div class="row d-flex flex-row align-items-center justify-content-center g-5 py-5 h-75">
-                    <div class="col-lg-12">
-                        <p class="hero-text">
-                            <h1 class=" display-5 fw-bold lh-1 mb-3 hero-text-dark">LOSANGELES</h1>
-                            <br>
-                            <h1 class=" display-5 fw-bold lh-1 mb-3 hero-text-blue">MOUNTAINS</h1>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </header>
-    </section>
     
-    <section class="bg-white w-100 nav-seconday">
-         
-        <nav class="navbar navbar-expand-md navbar-light bg-white">
-            <div class="container-fluid">
+    
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-align-justify"></i>
-                </button>
-                
-                <a class="navbar-brand" href="#"><img class="d-inline-block align-text-top" src="./assets/images/Logo.png" alt="blogify logo">
-                
-                </a>
+    <div>
+        <section class="bg">  
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="container-fluid">
 
-                <p class="nav-text bra"><span class="hero-text-dark-2">LOSANGELES</span><br><span class="hero-text-blue-2">MOUNTAINS</span></p>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-align-justify"></i>
+                    </button>
 
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav2">
-                    <ul class="navbar-nav">
-                        <li class="nav-item me-2">
-                            <a class="nav-link active" aria-current="page" href="#">01.team</a>
-                        </li>
-                        <li class="nav-item me-2">
-                            <a class="nav-link" href="#history">02.history</a>
-                        </li>
+                    <a class="navbar-brand" href="#"><img class="d-inline-block align-text-top" src="./assets/images/Logo.png" alt="blogify logo" ></a>
 
-                    </ul>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item me-2">
+                                <a class="nav-link active" aria-current="page" href="#team">01.team</a>
+                            </li>
+                            <li class="nav-item me-2">
+                                <a class="nav-link" href="#history">02.history</a>
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
 
-    </section>
-
-
-    <section class="container-fluid section2" id="history">
-        <div class="row justify-content-center">
-          <div class="col-md-8 pt-5-cust">
-            <p class="big blue">01.</p>
-            <p class="text-normal sec2text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ante viverra, rutrum erat rutrum, consectetur mi. Proin at maximus est. Nullam purus ex, iaculis sed erat sed, blandit tincidunt quam. Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue. </p>
+            <header>
+                <div class="container col-xxl-8 px-4 py-5 mt-5 hero">
+                    <div class="row d-flex flex-row align-items-center justify-content-center g-5 py-5 h-75">
+                        <div class="col-lg-12">
+                            <p class="hero-text">
+                                <h1 class=" display-5 fw-bold lh-1 mb-3 hero-text-dark">LOSANGELES</h1>
+                                <br>
+                                <h1 class=" display-5 fw-bold lh-1 mb-3 hero-text-blue">MOUNTAINS</h1>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </section>
+        
+        <section class="bg-white w-100 nav-seconday">
             
-        </div>
-        </div>
-    </section>
+            <nav class="navbar navbar-expand-md navbar-light bg-white">
+                <div class="container-fluid">
 
-    <section class="container-fluid sectioncarousel">
-        <div class="row justify-content-center">
-            <div class="col-md-8 pt-4 pb-5">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div  class="d-flex justify-content-evenly">
-                            <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
-                            <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
-                            <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
-                            <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div  class="d-flex justify-content-evenly">
-                            <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
-                            <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
-                            <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
-                            <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-evenly">
-                            <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
-                            <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
-                            <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
-                            <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
-                        </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-align-justify"></i>
+                    </button>
+                    
+                    <a class="navbar-brand" href="#"><img class="d-inline-block align-text-top" src="./assets/images/Logo.png" alt="blogify logo">
+                    
+                    </a>
+
+                    <p class="nav-text bra"><span class="hero-text-dark-2">LOSANGELES</span><br><span class="hero-text-blue-2">MOUNTAINS</span></p>
+
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav2">
+                        <ul class="navbar-nav">
+                            <li class="nav-item me-2">
+                                <a class="nav-link active" aria-current="page" href="#">01.team</a>
+                            </li>
+                            <li class="nav-item me-2">
+                                <a class="nav-link" href="#history">02.history</a>
+                            </li>
+
+                        </ul>
                     </div>
                 </div>
-                </div>
+            </nav>
+
+        </section>
+
+
+        <section class="container-fluid section2" id="history">
+            <div class="row justify-content-center">
+            <div class="col-md-8 pt-5-cust">
+                <p class="big blue">01.</p>
+                <p class="text-normal sec2text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ante viverra, rutrum erat rutrum, consectetur mi. Proin at maximus est. Nullam purus ex, iaculis sed erat sed, blandit tincidunt quam. Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue. </p>
+                
             </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <section class="container section3 bg-white">
-        <div class="row">
-          <div class="col-md-3 offset-md-1">
-            <p class="big2 blue2">02.</p>
-         </div>
-         <div class="col-md-6 p-1 d-flex align-items-center">
-            <p class="text-normal px-3">Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue. </p>
-         </div>
-        </div>
-    </section>
-
-    <section class="container-fluid section4 bg-prim">
-        <div class="row">
-          <div class="col-md-11 offset-md-1">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="Mountain1-tab" data-bs-toggle="tab" data-bs-target="#Mountain1" type="button" role="tab" aria-controls="home" aria-selected="true">Mountain1</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="Mountain2-tab" data-bs-toggle="tab" data-bs-target="#Mountain2" type="button" role="tab" aria-controls="profile" aria-selected="false">Mountain2</button>
-                </li>
-              </ul>
-         </div>
-        </div>
-    </section>
-
-    <section class="container-fluid section-tab">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="Mountain1" role="tabpanel" aria-labelledby="Mountain1-tab">
- 1
+        <section class="container-fluid sectioncarousel" id="team">
+            <div class="row justify-content-center">
+                <div class="col-md-8 pt-4 pb-5">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
-                    <div class="tab-pane fade" id="Mountain2" role="tabpanel" aria-labelledby="Mountain2-tab">
-2
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div  class="d-flex justify-content-evenly">
+                                <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
+                                <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
+                                <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
+                                <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div  class="d-flex justify-content-evenly">
+                                <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
+                                <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
+                                <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
+                                <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-evenly">
+                                <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
+                                <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
+                                <img src="./assets/images/Group 8 copy.png" class="d-block w-100 p-1" alt="...">
+                                <img src="./assets/images/Group 10 copy.png" class="d-block w-100 p-1" alt="...">
+                            </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="container section3 bg-white">
+            <div class="row">
+            <div class="col-md-3 offset-md-1">
+                <p class="big2 blue2">02.</p>
+            </div>
+            <div class="col-md-6 p-1 d-flex align-items-center">
+                <p class="text-normal px-3">Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue. </p>
+            </div>
+            </div>
+        </section>
+
+        <section class="container-fluid section4 bg-prim">
+            <div class="row">
+            <div class="col-md-11 offset-md-1">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="Mountain1-tab" data-bs-toggle="tab" data-bs-target="#Mountain1" type="button" role="tab" aria-controls="home" aria-selected="true">Mountain1</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="Mountain2-tab" data-bs-toggle="tab" data-bs-target="#Mountain2" type="button" role="tab" aria-controls="profile" aria-selected="false">Mountain2</button>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </section>
+
+        <section class="container-fluid section-tab">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="Mountain1" role="tabpanel" aria-labelledby="Mountain1-tab">
+                            <div class="cont-card">
+                                <div class="card1">
+                                        
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th  colspan="2" class="py-2">SCHEDULE</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>25 Nov 2016	</th>
+                                                    <td>Vestibulum viverra</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <th>28 Nov 2016	</th>
+                                                    <td>Vestibulum viverra</td>
+                                                </tr>
+
+                                                <tr><td  class="py-2 my-3" colspan="2"></td></tr>
+                                                <tr>
+                                                    <th>18 Dec 2016	</th>
+                                                    <td>Vestibulum viverra</td>
+                                                </tr>
+
+                                                <tr><td  class="py-2 my-3" colspan="2"></td></tr>
+                                                <tr>
+                                                    <th>7 Jan 2017	</th>
+                                                    <td>Vestibulum viverra</td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="Mountain2" role="tabpanel" aria-labelledby="Mountain2-tab">
+                            <div class="cont-card">
+                                <div class="card1">
+                                        
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th  colspan="2" class="py-2">SCHEDULE</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>17 Nov 2016	</th>
+                                                    <td>Vestibulum viverra</td>
+                                                </tr>
+
+                                                <tr><td  class="py-2 my-3" colspan="2"></td></tr>
+                                                <tr>
+                                                    <th>13 Dec 2016	</th>
+                                                    <td>Vestibulum viverra</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>28 Dec 2016	</th>
+                                                    <td>Vestibulum viverra</td>
+                                                </tr>
+
+                                                <tr><td  class="py-2 my-3" colspan="2"></td></tr>
+                                                <tr>
+                                                    <th>9 Feb 2017	</th>
+                                                    <td>Vestibulum viverra</td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                </div>
+                            </div>
+    2
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="container-fluid">
+            <div class="d-flex flex-column justify-content-around flex-md-row">
+                <div class="text-center py-3 align-self-center"><img src="./assets/images/Logofooter.png"></div>
+                <div class="text-center py-3 copyright align-self-center">COPYRIGHT 2016. ALL RIGHTS RESERVED.</div>
+            </div>
+        </footer>
+    </div>
 
     <script type="text/javascript" src="./assets/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="./assets/bs/js/bootstrap.bundle.js"></script>
