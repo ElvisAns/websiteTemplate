@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Coalition technologies</title>
+        <link type="text/css" rel="stylesheet" href="./assets/bs/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="./assets/fontawesome/css/all.css">
+        <style>
+            @font-face {
+                font-family: 'oswald';
+                src: url('./assets/fonts/Oswald-Regular.ttf');
+            }
+            
+            @font-face {
+                font-family: 'bebas';
+                src: url('./assets/fonts/Bebas-Regular.ttf');
+            }
+
+            @font-face {
+                font-family: 'lato-light';
+                src: url("./assets/fonts/Lato-Light.ttf");
+            }
+
+            
+            @font-face {
+                font-family: 'lato_italic';
+                src: url('./assets/fonts/Lato-BlackItalic.ttf');
+            }
+
+            .navbar{
+                background-color: transparent;
+            }
+            #navbarNav > ul > li > a,#navbarNav2 > ul > li > a {
+                font-family: 'lato_italic' !important;
+                text-decoration: underline;
+                text-underline-offset: 0.2em;
+            }
+            #navbarNav > ul > li > a:hover,#navbarNav2 > ul > li > a:hover{
+                font-size:20px;
+            }
+            #navbarNav > ul > li > a{
+                color: white;
+            }
+
+            #navbarNav2 > ul > li > a{
+                color: black;
+            }
+            @media screen and (min-width:1200px) {
+                .navbar-brand {
+                    margin-left : 300px;
+                }
+            }
+            .nav-seconday{
+                position: sticky;
+                top: 0px;
+            }
+            .bg{
+                width: 100%;
+                min-height: 100vh;
+                background-image: url("./assets/images/Curves\ 1.png");
+            }
+            .hero-text{
+                font-size: 70pt;
+                
+            }
+            .hero-text-dark,.hero-text-blue,.hero-text-blue-2,.hero-text-dark-2{
+                font-family: bebas;
+                font-size: 4.5em;
+            }
+            
+            @media screen and (min-width:1200px) {
+                .hero-text-dark,.hero-text-blue{
+                    font-size: 6.5em;
+                }
+            }
+
+            .hero-text-blue{
+                color: #414f6b;
+            }
+            .hero-text-dark{
+                color: #4d4d4d;
+            }
+            .nav-seconday{
+                height: 30px;
+            }
+
+            .nav-seconday *{
+                color: black;
+            }
+            .section2{
+                min-height: 100vh;
+                background-image: url("./assets/images/Bgsection2.png");
+            }
+            .sectioncarousel{
+                min-height: 20vh;
+                background-image: url("./assets/images/Bgcarousel.png");
+            }
+            .bra{
+                word-break: break-word;
+                font-family: bebas;
+                font-size: 6px;
+                margin-top: 25px;
+                line-height: 12px;
+            }
+            .hero-text-blue-2{
+                color: #414f6b;
+            }
+            .big{
+                font-size: 135pt;
+                font-family: oswald;
+                
+            }
+            .blue{
+                color: rgba(65,79,107,0.5);
+            }
+            .pt-5-cust{
+                padding-top: 100px;
+            }
+            .text-normal{
+                font-family: 'lato-light';
+            }
+            .sec2text{
+                position:relative;
+                top: -60px;
+                left: 100px;
+                max-width: 70%;
+            }
+            .text-os{
+                font-family: oswald;
+            }
+            .sec2text2{
+                position: relative;
+                top:-100px;
+                left:
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+
+    <section class="bg">  
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-align-justify"></i>
+                </button>
+
+                <a class="navbar-brand" href="#"><img class="d-inline-block align-text-top" src="./assets/images/Logo.png" alt="blogify logo" ></a>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item me-2">
+                            <a class="nav-link active" aria-current="page" href="#">01.team</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link" href="#">02.history</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header>
+            <div class="container col-xxl-8 px-4 py-5 mt-5 hero">
+                <div class="row d-flex flex-row align-items-center justify-content-center g-5 py-5 h-75">
+                    <div class="col-lg-12">
+                        <p class="hero-text">
+                            <h1 class=" display-5 fw-bold lh-1 mb-3 hero-text-dark">LOSANGELES</h1>
+                            <br>
+                            <h1 class=" display-5 fw-bold lh-1 mb-3 hero-text-blue">MOUNTAINS</h1>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+    
+    <section class="bg-white w-100 nav-seconday">
+         
+        <nav class="navbar navbar-expand-md navbar-light bg-white">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-align-justify"></i>
+                </button>
+                
+                <a class="navbar-brand" href="#"><img class="d-inline-block align-text-top" src="./assets/images/Logo.png" alt="blogify logo">
+                
+                </a>
+
+                <p class="nav-text bra"><span class="hero-text-dark-2">LOSANGELES</span><br><span class="hero-text-blue-2">MOUNTAINS</span></p>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav2">
+                    <ul class="navbar-nav">
+                        <li class="nav-item me-2">
+                            <a class="nav-link active" aria-current="page" href="#">01.team</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link" href="#">02.history</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </section>
+
+
+    <section class="container-fluid section2">
+        <div class="row justify-content-center">
+          <div class="col-md-8 pt-5-cust">
+            <p class="big blue">01.</p>
+            <p class="text-normal sec2text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ante viverra, rutrum erat rutrum, consectetur mi. Proin at maximus est. Nullam purus ex, iaculis sed erat sed, blandit tincidunt quam. Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue. </p>
+            <p class="text-os sec2text2">HISTORY</p>
+        </div>
+        </div>
+    </section>
+
+    <section class="container-fluid sectioncarousel">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="./assets/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/bs/js/bootstrap.bundle.js"></script>
+    <script>
+        $(document).ready(func
