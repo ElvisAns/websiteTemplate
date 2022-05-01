@@ -39,4 +39,4 @@ I'm a full stack developer with a passion for both frontend and backend developm
 
 
 ## Screenshots
-![App Screenshot](https://user-images.githubusercontent.com/35831811/166160683-314a9aff-c320-4df3-b1b5-aff41a0b0144.png)
+![image](https://user-images.githubusercontent.com/35831811/166160764-1663f2ce-ae3e-437f-bea7-016fa1e5956f.png)
